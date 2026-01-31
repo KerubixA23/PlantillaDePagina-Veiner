@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a3921;
+  background-color: #fefefe;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #3d2b1c;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #7d5c3d;
+  margin-bottom: 1rem;
+}
+
+/* NAVBAR */
+.barra-navegacion {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(90, 57, 33, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navegacion-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo-cafe {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5a3921;
+}
+
+.logo-cafe i {
+  color: #d4a55c;
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.menu-principal {
+  display: flex;
+  list-style: none;
+}
+
+.menu-principal li {
+  margin: 0 20px;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #5a3921;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+  color: #d4a55c;
+}
+
+.menu-principal a.activo::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d4a55c;
+}
+
+/* Botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.boton-pequeno {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.boton-mediano {
+  padding: 12px 28px;
+  font-size: 1rem;
+}
+
+.boton-grande {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+.boton-claro {
+  background-color: #d4a55c;
+  color: #fff;
+}
+
+.boton-claro:hover {
+  background-color: #c8953c;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 165, 92, 0.3);
+}
+
+.boton-oscuro {
+  background-color: #5a3921;
+  color: #fff;
+}
+
+.boton-oscuro:hover {
+  background-color: #3d2b1c;
+  transform: translateY(-3px);
+}
+
+.boton-transparente {
+  background-color: transparent;
+  color: #5a3921;
+  border: 2px solid #5a3921;
+}
+
+.boton-transparente:hover {
+  background-color: #5a3921;
+  color: #fff;
+}
+
+.acciones-navegacion {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle-checkbox {
+  display: none;
+  position: absolute;
+  left: -9999px;
+}
+
+.boton-menu-movil {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #5a3921;
+  cursor: pointer;
+  padding: 5px;
+  user-select: none;
+}
+
+/* HERO */
+.seccion-hero {
+  background: linear-gradient(135deg, #f9f3e9 0%, #f5ebdd 100%);
+  padding: 150px 0 100px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.contenido-hero {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.texto-hero {
+  flex: 1;
+}
+
+.titulo-hero {
+  margin-bottom: 1.5rem;
+}
+
+.descripcion-hero {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.botones-hero {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 50px;
+  padding: 80px;
+}
+
+.contenido-contacto {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #f7efe8;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #5a3921;
+  margin-bottom: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FORM */
+.right {
+  width: 50%;
+}
+
+.right h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.right p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+form textarea {
+  height: 120px;
+  resize: none;
+}
+
+form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: #c98c5a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* WATERMARK */
+.watermark {
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #3d2b1c;
+  color: #ddd;
+  padding: 60px 80px 30px;
+}
+
+.pie-pagina {
+  background-color: #3d2b1c;
+  color: #fff;
+}
+
+.derechos-autor {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+footer h4, footer h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+footer a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+copyright {
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .contenido-hero {
+    flex-direction: column;
+  }
+  
+  .texto-hero {
+    text-align: center;
+  }
+  
+  .botones-hero {
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-principal {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .menu-toggle-checkbox:checked ~ .menu-principal {
+    display: flex;
+  }
+  
+  .menu-principal li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .menu-principal a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .boton-menu-movil {
+    display: block;
+  }
+  
+  .acciones-navegacion {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .contenido-contacto {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .botones-hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .boton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .logo-cafe {
+    font-size: 1.5rem;
+  }
+  
+  .logo-cafe i {
+    font-size: 1.7rem;
+  }
+}
