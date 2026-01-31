@@ -1,0 +1,144 @@
+:root {
+    --primary: #5a3921; /* marrón oscuro */
+    --accent: #d4a55c;  /* dorado */
+    --bg: #f9f3e9;
+    --muted: #7d5c3d;
+    --text: #3d2b1c;
+} 
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Open Sans', sans-serif; color: var(--text); background-color: var(--bg); padding-top: 80px; }
+
+/* HEADER */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #fff;
+}
+
+.logo i { font-size: 24px; color: #333; }
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--muted);
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+} 
+
+.nav-menu a.active { color: #000; font-weight: 700; border-bottom: 2px solid #000; padding-bottom: 5px; }
+
+.btn-explore {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+} 
+
+/* HERO SECTION */
+.hero-section { padding: 0 20px 40px; background-color: #fff; }
+
+.hero-card {
+    background: linear-gradient(rgba(90,57,33,0.25), rgba(90,57,33,0.05)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} 
+
+.hero-overlay h1 {
+    color: #fff;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.hero-sub { color: rgba(255,255,255,0.92); text-shadow: 0 2px 8px rgba(0,0,0,0.35); font-size: 18px; margin-top: 6px; text-align: center; }
+
+/* SEARCH BAR */
+.search-container {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.search-field label { display: block; font-size: 11px; color: var(--muted); font-weight: 600; margin-bottom: 5px; } 
+.select { font-size: 14px; font-weight: 700; color: var(--text); cursor: pointer; display: flex; align-items: center; gap: 8px; } 
+.divider { width: 1px; height: 40px; background: #eee; }
+
+.btn-search {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+} 
+
+/* GALLERY SECTION */
+.gallery-section { background-color: transparent; padding: 80px 20px; }
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.prop-card { background: #fff; border-radius: 24px; padding: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+
+.prop-img { position: relative; border-radius: 14px; overflow: hidden; height: 300px; }
+.prop-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge { position: absolute; top: 15px; left: 15px; background: #fff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+
+.prop-content { padding: 15px 5px 5px; }
+.prop-loc { font-size: 11px; color: var(--muted); display: block; margin-bottom: 8px; }
+h3 { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--text); margin-bottom: 8px; font-weight: 700; }
+.prop-desc { color: var(--muted); margin-top: 6px; font-size: 14px; }
+
+.prop-specs {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1.5px solid #f2f2f2;
+    margin-bottom: 18px;
+}
+.prop-specs span { font-size: 11px; color: #777; display: flex; align-items: center; gap: 6px; }
+
+.prop-foot { display: flex; justify-content: space-between; align-items: center; }
+.prop-price { font-size: 20px; font-weight: 800; color: var(--text); } 
+
+.btn-details {
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} 

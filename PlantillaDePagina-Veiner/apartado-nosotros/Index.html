@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Delicia | Sobre Nosotros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS PRINCIPAL (compartido) -->
+    <link rel="stylesheet" href="../Pasteleria.css">
+    <!-- CSS ESPECÍFICO para esta página -->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="barra-navegacion">
+        <div class="contenedor navegacion-contenido">
+                <div class="logo-cafe">
+                <a href="../Pasteleria.html" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-coffee"></i>
+                    <span>Café Delicia</span>
+                    <span style="font-size: 0.8rem; margin-left: 6px; color: #5a3921;">🇬🇹 Guatemala</span>
+                </a>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            
+                <ul class="menu-principal">
+                <li><a href="../Pasteleria.html">Inicio</a></li>
+                <li><a href="../Pasteleria.html#menu">Menú</a></li>           
+                <li><a href="Index.html" class="activo">Nosotros</a></li>   
+                <li><a href="../Pasteleria.html#galeria">Galería</a></li>    
+                <li><a href="../Pasteleria.html#contacto">Contacto</a></li>
+            </ul>
+            
+            <div class="acciones-navegacion">
+                <a href="../Pasteleria.html#pedir" class="boton boton-pequeno boton-oscuro">
+                    <i class="fas fa-shopping-bag"></i> Pedir ahora
+                </a>
+            </div>
+
+            <label for="menu-toggle" class="boton-menu-movil" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+
+    <main class="pagina-nosotros">
+        <!-- Botón para volver al inicio -->
+        <div class="contenedor contenedor-volver">
+            <a href="../Pasteleria.html" class="boton-volver">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+
+        <!-- Sección Hero de Nosotros -->
+        <section class="hero-nosotros">
+            <div class="contenedor contenido-hero-nosotros">
+                <div class="texto-hero-nosotros">
+                    <h1 class="titulo-hero-nosotros">Nuestra Historia</h1>
+                    <p class="subtitulo-hero-nosotros">Desde 1998 horneando tradición y sabor guatemalteco</p>
+                </div>
+                <div class="imagen-hero-nosotros">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Interior de Pastelería Delicia">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Historia -->
+        <section class="seccion-historia">
+            <div class="contenedor">
+                <div class="grid-historia">
+                    <div class="historia-texto">
+                        <h2>Un sueño hecho realidad</h2>
+                        <p>Todo comenzó en 1998 cuando la familia Delicia decidió compartir su pasión por la repostería y la panadería artesanal. Lo que empezó como un pequeño local familiar en la Ciudad de Guatemala, hoy se ha convertido en un referente de pastelería en la región.</p>
+                        <p>Nuestra filosofía se basa en tres principios fundamentales: calidad, tradición y calidez humana. Seleccionamos ingredientes locales y recetas tradicionales para garantizar sabores auténticos en cada bocado.</p>
+                    </div>
+                    <div class="historia-imagen">
+                        <img src="imagen-sobre-nosotros-2.jpg" alt="Familia fundadora de Pastelería Delicia">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Valores -->
+        <section class="seccion-valores">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <h2>Nuestros Valores</h2>
+                    <p>Los principios que guían cada una de nuestras acciones</p>
+                </div>
+                
+                <div class="grid-valores">
+                    <div class="tarjeta-valor">
+                        <div class="icono-valor">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Sostenibilidad</h3>
+                        <p>Trabajamos directamente con pequeños productores que practican agricultura sostenible y reciben un precio justo por su trabajo.</p>
+                    </div>
+                    
+                    <div class="tarjeta-valor">
+                        <div class="icono-valor">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Pasión</h3>
+                        <p>Amamos lo que hacemos y eso se refleja en cada producto que elaboramos, desde la harina hasta el último postre.</p>
+                    </div>
+                    
+                    <div class="tarjeta-valor">
+                        <div class="icono-valor">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Comunidad</h3>
+                        <p>Creemos en construir comunidad. Nuestro espacio es un punto de encuentro donde las personas se reúnen, comparten y crean lazos.</p>
+                    </div>
+                    
+                    <div class="tarjeta-valor">
+                        <div class="icono-valor">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Excelencia</h3>
+                        <p>Nos esforzamos por ofrecer la mejor calidad en cada detalle, desde la selección de ingredientes hasta la atención al cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Equipo -->
+        <section class="seccion-equipo">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <h2>Nuestro Equipo</h2>
+                    <p>Los rostros detrás de cada delicia perfecta</p>
+                </div>
+                
+                <div class="grid-equipo">
+                    <div class="miembro-equipo">
+                        <div class="foto-miembro">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="María González">
+                        </div>
+                        <h3>María González</h3>
+                        <p class="cargo">Fundadora & Maestra Panadera</p>
+                        <p>Con más de 25 años de experiencia, María lidera la creación de nuestras recetas y supervisa la calidad de cada horneado.</p>
+                    </div>
+                    
+                    <div class="miembro-equipo">
+                        <div class="foto-miembro">
+                            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Carlos Rodríguez">
+                        </div>
+                        <h3>Carlos Rodríguez</h3>
+                        <p class="cargo">Maestro Panadero</p>
+                        <p>Cuarta generación de panaderos, Carlos preserva las recetas familiares mientras innova con creaciones contemporáneas.</p>
+                    </div>
+                    
+                    <div class="miembro-equipo">
+                        <div class="foto-miembro">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ana Martínez">
+                        </div>
+                        <h3>Ana Martínez</h3>
+                        <p class="cargo">Gerente & Pastelera</p>
+                        <p>Ana dirige nuestro equipo y se asegura de que cada producto llegue al cliente con la máxima calidad y presentación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Llamada a la acción -->
+        <section class="llamada-accion-nosotros">
+            <div class="contenedor">
+                <div class="contenido-llamada">
+                    <h2>¿Listo para vivir la experiencia Delicia?</h2>
+                    <p>Ven a conocernos y descubre por qué somos más que una pastelería</p>
+                    <div class="botones-llamada">
+                        <a href="../Pasteleria.html#contacto" class="boton boton-mediano boton-claro">
+                            <i class="fas fa-map-marker-alt"></i> Visítanos hoy
+                        </a>
+                        <a href="../Pasteleria.html#menu" class="boton boton-mediano boton-transparente">
+                            Ver nuestro menú
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón flotante para volver arriba -->
+        <a href="#" class="boton-flotante">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+
+    <footer class="pie-pagina" id="contacto">
+            <div class="derechos-autor">
+            <div class="contenedor">
+                <p>&copy; 2023 Pastelería Delicia. Todos los derechos reservados. | <a href="../Pasteleria.html" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
