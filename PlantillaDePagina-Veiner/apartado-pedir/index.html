@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pedir - Pastelería</title>
+  <link rel="stylesheet" href="../Pasteleria.css">
+  <style>
+    .pedido-contenedor{max-width:720px;margin:32px auto;padding:20px;background:#fff;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .pedido-contenedor h1{margin-top:0;font-size:1.6rem}
+    .campo{display:flex;flex-direction:column;margin-bottom:12px}
+    label{font-weight:600;margin-bottom:6px}
+    input,textarea,select{padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem}
+    .acciones{display:flex;gap:10px;align-items:center;margin-top:14px}
+    .btn{background:#c0392b;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;display:inline-block}
+    .btn-volver{background:#5a3921;margin-bottom:14px;padding:12px 20px}
+    .btn-volver:hover{background:#3d2b1c}
+    @media(max-width:520px){.pedido-contenedor{margin:14px;padding:12px}}
+  </style>
+</head>
+<body>
+  <div style="padding:20px;">
+    <a href="../Pasteleria.html" class="btn btn-volver">← Volver al inicio</a>
+  </div>
+
+  <main>
+    <section class="pedido-contenedor">
+      <h1>Hacer un pedido</h1>
+      <p>Completa el formulario y te contactaremos para confirmar el pedido.</p>
+      <form id="formPedido">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" required>
+        </div>
+        <div class="campo">
+          <label for="email">Email (opcional)</label>
+          <input id="email" name="email" type="email">
+        </div>
+        <div class="campo">
+          <label for="producto">Producto</label>
+          <select id="producto" name="producto">
+            <option value="Torta">Torta</option>
+            <option value="Cupcakes">Cupcakes</option>
+            <option value="Galletas">Galletas</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="cantidad">Cantidad</label>
+          <input id="cantidad" name="cantidad" type="number" min="1" value="1">
+        </div>
+        <div class="campo">
+          <label for="mensaje">Detalles / Instrucciones</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+
+        <div class="acciones">
+          <button type="submit" class="btn">Enviar pedido</button>
+          <a href="../Pasteleria.html" class="btn" style="background:#777">Volver</a>
+        </div>
+      </form>
+
+      <div id="resultado" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('formPedido').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const obj = Object.fromEntries(data.entries());
+      const resumen = document.getElementById('resultado');
+      resumen.innerHTML = `<strong>Resumen enviado (simulado):</strong><pre>${JSON.stringify(obj,null,2)}</pre><p>Te contactaremos pronto.</p>`;
+      e.target.reset();
+    });
+  </script>
+  <!-- Floating order button for quick access on mobile -->
+  <a href="../apartado-pedir/index.html" class="btn-pedir-flotante" aria-label="Pedir ahora">
+    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+  </a>
+</body>
+</html>

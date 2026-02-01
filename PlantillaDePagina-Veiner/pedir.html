@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redirigiendo…</title>
+    <meta http-equiv="refresh" content="0;url=apartado-pedir/index.html">
+    <script>location.replace('apartado-pedir/index.html');</script>
+  </head>
+  <body>
+    <p>Redirigiendo a la página de pedidos. Si no se redirige automáticamente, <a href="apartado-pedir/index.html">haz clic aquí</a>.</p>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pedir | Café Delicia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Pasteleria.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor navegacion-contenido">
+            <div class="logo-cafe">
+                <a href="Pasteleria.html" style="text-decoration:none;color:inherit;">
+                    <i class="fas fa-coffee"></i>
+                    <span>Café Delicia</span>
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <ul class="menu-principal">
+                <li><a href="Pasteleria.html">Inicio</a></li>
+                <li><a href="Pasteleria.html#menu">Menú</a></li>
+                <li><a href="apartado-nosotros/Index.html">Nosotros</a></li>
+                <li><a href="apartado-galeria/index.html">Galería</a></li>
+                <li><a href="Pasteleria.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="acciones-navegacion">
+                <a href="Pasteleria.html#contacto" class="boton boton-pequeno boton-oscuro">Contacto</a>
+            </div>
+            <label for="menu-toggle" class="boton-menu-movil" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+
+    <main style="padding:140px 0 60px;">
+        <div class="contenedor">
+            <h1>Hacer un pedido</h1>
+            <p>Para realizar pedidos, por favor contáctanos al teléfono <strong>+502 1234 5678</strong> o envía un correo a <strong>pedidos@cafedelicia.gt</strong>.</p>
+            <p>Próximamente añadiremos un formulario de pedidos en línea y un carrito.</p>
+            <div style="margin-top:30px;">
+                <a href="Pasteleria.html#menu" class="boton boton-mediano boton-claro">Ver Menú</a>
+                <a href="Pasteleria.html" class="boton boton-mediano boton-transparente">Volver</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="derechos-autor">
+            <div class="contenedor">
+                <p>&copy; 2023 Café Delicia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
