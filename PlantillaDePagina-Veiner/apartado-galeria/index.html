@@ -14,18 +14,21 @@
     <nav class="barra-navegacion">
         <div class="contenedor navegacion-contenido">
             <div class="logo-cafe">
-                <i class="fas fa-coffee"></i>
-                <span>Café Delicia</span>
+                <a href="../Pasteleria.html" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Pastelería Delicia</span>
+                    <span style="font-size: 0.8rem; margin-left: 6px; color: #5a3921;">🇬🇹 Guatemala</span>
+                </a>
             </div>
             
             <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
             
             <ul class="menu-principal">
-                <li><a href="../Pasteleria.html#inicio" class="activo">Inicio</a></li>
-                <li><a href="../Pasteleria.html#menu">Menú</a></li>           
-                <li><a href="../Pasteleria.html#nosotros">Nosotros</a></li>   
-                <li><a href="../Pasteleria.html#galeria">Galería</a></li>    
-                <li><a href="../Pasteleria.html#contacto">Contacto</a></li>
+                <li><a href="../Pasteleria.html">Inicio</a></li>
+                <li><a href="../apartado-menu/indexo.html">Menú</a></li>
+                <li><a href="../apartado-nosotros/Index.html">Nosotros</a></li>
+                <li><a href="index.html" class="activo">Galería</a></li>
+                <li><a href="../apartado-contacto/contacto.html">Contacto</a></li>
             </ul>
             
             <div class="acciones-navegacion">
@@ -36,6 +39,12 @@
 
             <label for="menu-toggle" class="boton-menu-movil" aria-label="Abrir menú de navegación">
                 <i class="fas fa-bars"></i>
+
+                <div class="contenedor contenedor-volver" style="margin-top: 90px;">
+                    <a href="../Pasteleria.html" class="boton-volver">
+                        <i class="fas fa-arrow-left"></i> Volver al inicio
+                    </a>
+                </div>
             </label>
         </div>
     </nav>
