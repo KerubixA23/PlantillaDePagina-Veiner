@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Café Delicia Guatemala | Contacto</title>
+  <link rel="stylesheet" href="../Pasteleria.css">
+  <link rel="stylesheet" href="contacto.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="barra-navegacion" role="navigation" aria-label="Navegación principal">
+  <div class="contenedor navegacion-contenido">
+    <div class="logo-cafe" aria-label="Logo Pastelería Delicia">
+      <i class="fas fa-birthday-cake" aria-hidden="true"></i>
+      <span>Pastelería Delicia</span>
+      <span style="font-size: 0.8rem; margin-left: 6px; color: #5a3921;">🇬🇹 Guatemala</span>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+
+    <ul class="menu-principal" role="menubar">
+      <li role="none"><a href="../Pasteleria.html" class="menu-link" role="menuitem">Inicio</a></li>
+      <li role="none"><a href="../apartado-menu/indexo.html" class="menu-link" role="menuitem">Menú</a></li>
+      <li role="none"><a href="../apartado-nosotros/Index.html" class="menu-link" role="menuitem">Nosotros</a></li>
+      <li role="none"><a href="../apartado-galeria/index.html" class="menu-link" role="menuitem">Galería</a></li>
+      <li role="none"><a href="contacto.html" class="activo menu-link" role="menuitem">Contacto</a></li>
+    </ul>
+
+    <div class="acciones-navegacion">
+      <a href="../apartado-pedir/index.html" class="boton boton-pequeno boton-oscuro" aria-label="Ir a pedido">
+        <i class="fas fa-shopping-bag" aria-hidden="true"></i> Pedir ahora
+      </a>
+    </div>
+
+    <label for="menu-toggle" class="boton-menu-movil" aria-label="Abrir menú de navegación">
+      <span class="icono-hamburguesa" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </label>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="seccion-hero" role="banner">
+  <div class="contenedor contenido-hero">
+    <div class="texto-hero">
+      <h1 class="titulo-hero">Contáctanos</h1>
+      <p class="descripcion-hero">¿Tienes preguntas o deseas hacer un pedido especial? Nos encantaría escucharte. Contáctanos a través de nuestros canales y te responderemos lo antes posible.</p>
+      <div class="botones-hero">
+        <a href="#formulario" class="boton boton-grande boton-claro">
+          Enviar mensaje <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#ubicacion" class="boton boton-grande boton-transparente">
+          <i class="fas fa-map-marker-alt"></i> Visítanos
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<section class="content" id="formulario" aria-label="Formulario de contacto">
+  <div class="contenedor contenido-contacto">
+    <div class="left">
+      <div class="cards">
+        <div class="card">
+          <h3>📞 Teléfono</h3>
+          <p>207-8767-452</p>
+        </div>
+        <div class="card">
+          <h3>💬 Whatsapp</h3>
+          <p>082-123-234-345</p>
+        </div>
+        <div class="card">
+          <h3>✉️ Correo Electrónico</h3>
+          <p>support@yoursite.com</p>
+        </div>
+        <div class="card">
+          <h3>🏪 Nuestra Tienda</h3>
+          <p>6a Avenida 10-30, Zona 9<br>Ciudad de Guatemala, Guatemala 🇬🇹</p>
+        </div>
+      </div>
+      <iframe class="map"
+        src="https://www.google.com/maps?q=6a%20Avenida%2010-30%2C%20Zona%209%2C%20Ciudad%20de%20Guatemala%2C%20Guatemala&output=embed"
+        title="Mapa ubicación Pastelería Delicia Guatemala" aria-label="Mapa de ubicación Pastelería Delicia Guatemala" loading="lazy"></iframe>
+    </div>
+    <div class="right">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes dudas, sugerencias o quieres hacer un pedido especial? Completa el formulario y te responderemos pronto.</p>
+      <form>
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu Nombre">
+        <label>Correo Electrónico</label>
+        <input type="email" placeholder="tu@email.com">
+        <label>Asunto</label>
+        <input type="text" placeholder="Asunto">
+        <label>Mensaje</label>
+        <textarea placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar Ahora</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="pie-pagina" id="contacto" role="contentinfo">
+  <div class="derechos-autor">
+    <div class="contenedor">
+      <p>&copy; 2023 Café Delicia. Todos los derechos reservados. | Diseño inspirado en plantilla Wix</p>
+    </div>
+  </div>
+</footer>
+<!-- Floating mobile order button -->
+<a href="../apartado-pedir/index.html" class="btn-pedir-flotante" aria-label="Pedir ahora">
+    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Café Delicia Guatemala</title>
+    <link rel="stylesheet" href="../Pasteleria.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor navegacion-contenido">
+            <div class="logo-cafe">
+                <i class="fas fa-coffee"></i>
+                <span>Café Delicia</span>
+                <span style="font-size: 0.8rem; margin-left: 6px; color: #5a3921;">🇬🇹 Guatemala</span>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <ul class="menu-principal">
+                <li><a href="../Pasteleria.html">Inicio</a></li>
+                <li><a href="indexo.html" class="activo">Menú</a></li>
+                <li><a href="../apartado-nosotros/Index.html">Nosotros</a></li>
+                <li><a href="../apartado-galeria/index.html">Galería</a></li>
+                <li><a href="../apartado-contacto/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="acciones-navegacion">
+                <a href="../apartado-pedir/index.html" class="boton boton-pequeno boton-oscuro">
+                    <i class="fas fa-shopping-bag"></i> Pedir ahora
+                </a>
+            </div>
+            <label for="menu-toggle" class="boton-menu-movil" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+    <header class="seccion-hero" style="min-height: 40vh;">
+        <div class="contenedor contenido-hero">
+            <div class="texto-hero">
+                <h1 class="titulo-hero">Nuestro Menú</h1>
+                <p class="descripcion-hero">Descubre la variedad de sabores artesanales que tenemos para ti. Café, panadería y postres hechos con amor y tradición guatemalteca.</p>
+            </div>
+        </div>
+    </header>
+    <main class="menu-principal-seccion">
+        <div class="contenedor">
+            <div class="menu-categorias">
+                <button class="menu-categoria activo" data-categoria="cafes">Cafés</button>
+                <button class="menu-categoria" data-categoria="panes">Panadería</button>
+                <button class="menu-categoria" data-categoria="postres">Postres</button>
+                <button class="menu-categoria" data-categoria="bebidas">Bebidas</button>
+            </div>
+            <div class="menu-lista" id="menu-lista">
+                <!-- Los productos se mostrarán aquí -->
+            </div>
+        </div>
+    </main>
+    <footer class="pie-pagina" id="contacto">
+        <div class="derechos-autor">
+            <div class="contenedor">
+                <p>&copy; 2023 Café Delicia. Todos los derechos reservados. | Diseño inspirado en plantilla Wix</p>
+            </div>
+        </div>
+    </footer>
+    <a href="../apartado-pedir/index.html" class="btn-pedir-flotante" aria-label="Pedir ahora">
+        <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+    </a>
+    <script src="menu.js"></script>
+</body>
+</html>

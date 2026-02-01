@@ -1,3 +1,96 @@
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.content, .seccion-hero, .contenedor, .contenido-contacto {
+  flex-shrink: 0;
+}
+.pie-pagina {
+  margin-top: auto;
+  width: 100%;
+  background: #f5ebdd;
+  padding: 18px 0 0 0;
+  box-shadow: 0 -2px 10px rgba(90,57,33,0.04);
+}
+@media (max-width: 700px) {
+  .pie-pagina {
+    padding-bottom: 0;
+    margin-top: 24px;
+  }
+  .content {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .seccion-hero {
+    padding: 90px 0 40px 0;
+    margin-top: 60px;
+  }
+  .contenido-hero {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .titulo-hero {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .descripcion-hero {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .botones-hero {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  .content {
+    flex-direction: column;
+    gap: 24px;
+    padding: 18px 6px 32px 6px;
+  }
+  .contenido-contacto {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .left, .right {
+    width: 100%;
+    min-width: 0;
+  }
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .card {
+    min-width: 120px;
+    flex: 1 1 40%;
+    font-size: 0.98rem;
+    padding: 10px 4px;
+  }
+  .map {
+    width: 100% !important;
+    min-width: 0;
+    height: 160px !important;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  form {
+    padding: 0;
+  }
+  input, textarea {
+    font-size: 1rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;

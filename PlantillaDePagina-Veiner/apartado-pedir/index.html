@@ -15,7 +15,45 @@
     .btn{background:#c0392b;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;display:inline-block}
     .btn-volver{background:#5a3921;margin-bottom:14px;padding:12px 20px}
     .btn-volver:hover{background:#3d2b1c}
-    @media(max-width:520px){.pedido-contenedor{margin:14px;padding:12px}}
+    .postres-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .postre-card {
+      background: #f9f6f2;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(90,57,33,0.07);
+      padding: 12px 8px 10px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.18s, box-shadow 0.18s;
+      min-width: 120px;
+    }
+    .postre-card.selected {
+      border: 2px solid #d4a55c;
+      box-shadow: 0 4px 18px rgba(212,165,92,0.13);
+      background: #fffbe7;
+    }
+    .postre-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      border: 2px solid #d4a55c33;
+    }
+    .postre-card span {
+      font-size: 1rem;
+      color: #5a3921;
+      font-weight: 600;
+      text-align: center;
+    }
+    @media(max-width:520px){.pedido-contenedor{margin:14px;padding:12px}.postres-lista{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
@@ -41,13 +79,9 @@
           <input id="email" name="email" type="email">
         </div>
         <div class="campo">
-          <label for="producto">Producto</label>
-          <select id="producto" name="producto">
-            <option value="Torta">Torta</option>
-            <option value="Cupcakes">Cupcakes</option>
-            <option value="Galletas">Galletas</option>
-            <option value="Otro">Otro</option>
-          </select>
+          <label>Elige tu postre</label>
+          <div class="postres-lista" id="postres-lista"></div>
+          <input type="hidden" id="producto" name="producto" required>
         </div>
         <div class="campo">
           <label for="cantidad">Cantidad</label>
@@ -69,6 +103,62 @@
   </main>
 
   <script>
+    // Lista de postres (igual que en menú)
+    const postres = [
+      {
+        nombre: "Cheesecake de Frambuesa",
+        imagen: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Brownie Artesanal",
+        imagen: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Tiramisú",
+        imagen: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Pastel Tres Leches",
+        imagen: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Pie de Limón",
+        imagen: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Flan Casero",
+        imagen: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        nombre: "Galleta de Avena",
+        imagen: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+    const postresLista = document.getElementById('postres-lista');
+    const inputProducto = document.getElementById('producto');
+    let seleccionado = null;
+    function renderPostres() {
+      postresLista.innerHTML = '';
+      postres.forEach((p, idx) => {
+        const div = document.createElement('div');
+        div.className = 'postre-card' + (seleccionado === idx ? ' selected' : '');
+        div.innerHTML = `<img src="${p.imagen}" alt="${p.nombre}"><span>${p.nombre}</span>`;
+        div.onclick = () => {
+          seleccionado = idx;
+          inputProducto.value = p.nombre;
+          renderPostres();
+        };
+        postresLista.appendChild(div);
+      });
+      // Si nada seleccionado, selecciona el primero
+      if (seleccionado === null) {
+        seleccionado = 0;
+        inputProducto.value = postres[0].nombre;
+        renderPostres();
+      }
+    }
+    renderPostres();
+
     document.getElementById('formPedido').addEventListener('submit', function(e){
       e.preventDefault();
       const data = new FormData(e.target);
@@ -76,6 +166,8 @@
       const resumen = document.getElementById('resultado');
       resumen.innerHTML = `<strong>Resumen enviado (simulado):</strong><pre>${JSON.stringify(obj,null,2)}</pre><p>Te contactaremos pronto.</p>`;
       e.target.reset();
+      seleccionado = null;
+      renderPostres();
     });
   </script>
   <!-- Floating order button for quick access on mobile -->

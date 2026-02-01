@@ -1,3 +1,49 @@
+/* Mejoras visuales para el header en móvil */
+@media (max-width: 700px) {
+    .seccion-hero {
+        padding: 32px 0 18px 0;
+        min-height: 60vh;
+        background: linear-gradient(120deg, #fffbe7 60%, #f9f6f2 100%);
+    }
+    .contenido-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .texto-hero {
+        text-align: center;
+        padding: 0 8px;
+    }
+    .titulo-hero {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .descripcion-hero {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+    .botones-hero {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .imagen-hero {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .marco-imagen img {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(90,57,33,0.10);
+    }
+    .elementos-decorativos {
+        display: none;
+    }
+}
 * {
     margin: 0;
     padding: 0;
